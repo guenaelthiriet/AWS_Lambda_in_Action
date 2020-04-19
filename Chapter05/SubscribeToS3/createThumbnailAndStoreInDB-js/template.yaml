@@ -1,0 +1,11 @@
+Resources:
+  Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      CodeUri: .
+      Runtime: nodejs10.x
+      Timeout: 300
+      MemorySize: 128
+      Layers:
+      - arn:aws:lambda:us-east-1:175033217214:layer:graphicsmagick:2
